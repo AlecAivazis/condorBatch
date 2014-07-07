@@ -13,7 +13,7 @@ doTest() {
     cout << "loaded ScanChain" << endl;
     // add the file to a TChain
     TChain *chain = new TChain("Events"); 
-    chain->Add("source/*.root");
+    chain->Add("*.root");
     // create the looper
     babyMaker* looper = new babyMaker();
     // loop over the file

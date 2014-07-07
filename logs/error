@@ -1,18 +1,0 @@
-Info in <TUnixSystem::ACLiC>: creating shared library /data9/condor_local/execute/dir_15374/glide_5nBFnN/execute/dir_19992/./ScanChain_C.so
-In file included from /data9/condor_local/execute/dir_15374/glide_5nBFnN/execute/dir_19992/ScanChain_C_ACLiC_dict.h:34,
-                 from /data9/condor_local/execute/dir_15374/glide_5nBFnN/execute/dir_19992/ScanChain_C_ACLiC_dict.cxx:17:
-/data9/condor_local/execute/dir_15374/glide_5nBFnN/execute/dir_19992/./ScanChain.C: In member function 'void babyMaker::ScanChain(TChain*, std::string, int, float, bool)':
-/data9/condor_local/execute/dir_15374/glide_5nBFnN/execute/dir_19992/./ScanChain.C:108: warning: comparison between signed and unsigned integer expressions
-Using grid catalog type: UNKNOWN
-Using grid catalog : (null)
-VO name: cms
-Checksum type: None
-Destination SE type: SRMv2
-Destination SRM Request Token: put:2058263
-Source URL: file:/data9/condor_local/execute/dir_15374/glide_5nBFnN/execute/dir_19992/test.root
-File size: 11143171
-Source URL for copy: file:/data9/condor_local/execute/dir_15374/glide_5nBFnN/execute/dir_19992/test.root
-Destination URL: gsiftp://cabinet-6-6-29.t2.ucsd.edu:2811//hadoop/cms/store/user/aaivazis/ntuple0.root
-# streams: 1
-            0 bytes      0.00 KB/sec avg      0.00 KB/sec inst            0 bytes      0.00 KB/sec avg      0.00 KB/sec inst            0 bytes      0.00 KB/sec avg      0.00 KB/sec inst            0 bytes      0.00 KB/sec avg      0.00 KB/sec inst            0 bytes      0.00 KB/sec avg      0.00 KB/sec inst      1048576 bytes    252.51 KB/sec avg    252.51 KB/sec inst      1048576 bytes    252.51 KB/sec avg    252.51 KB/sec inst
-Transfer took 6030 ms
