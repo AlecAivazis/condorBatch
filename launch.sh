@@ -25,6 +25,7 @@ do
   tar -xzvf ${f}
 done
 
+# check that everything made it okay
 echo "filesystem: "
 pwd
 ls
@@ -32,7 +33,6 @@ ls
 echo "running baby maker"
 root -b -q doTest.C
 
-ls
-
 # copy the output directory to hadoop
+echo "copying files to ${COPYDIR}"
 lcg-cp -b -D srmv2 --vo cms --connect-timeout 2400 --verbose file://`pwd`/${TEMP_FILE_NAME} srm://bsrm-3.t2.ucsd.edu:8443/srm/v2/server?SFN=${COPYDIR}/${OUTPUT}

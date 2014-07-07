@@ -5,40 +5,31 @@
 # the directory to loop over
 #dir=/hadoop/cms/store/user/aaivazis/samples/signal/raw/1000
 dir=/hadoop/cms/store/user/aaivazis/samples
+
 # keep track of the batch counter
 batch=0
 # store the directory that we start in so we can move files back
 loc=$(pwd)
 
-echo ${loc}
+# check if the project has already been compressed
+if [ ! -f include.tar.gz ] ; then
+  echo "[ making the project archive... ]"
+  tar czvf include.tar.gz -C include .
+else
+  echo "[ project archive already exists... ]"
+fi
 
-echo "[ making the project archive... ]"
-cd include
-tar czvf include.tar.gz *
-mv include.tar.gz ..
-cd ..
-
-# loop over every file in the target directory
 for f in ${dir}/*.root
 do
-
-  echo "[ entering target directory... ]"
-  cd ${dir}
-  echo $(pwd)
+  # 
   echo "[ compressing target root file... ]"
-  echo $(basename ${f})
-  tar -zcf source-${batch}.tar.gz $(basename ${f})
-  echo "[ retrieving compressed file... ]"
-  mv source-${batch}.tar.gz ${loc}
-
-  cd ${loc}
+  tar -zcvf source-${batch}.tar.gz -C ${dir} $(basename ${f})
 
   echo "[ creating condor submission file... ]"
-  echo "batch = ${batch}"
   rm -rf batch_condor
   cat <<EOF > batch_condor
 universe = vanilla
-Executable = exec.sh
+Executable = launch.sh
 Requirements = Memory >= 199 && OpSys == "LINUX"&& (Arch != "DUMMY" )&& Disk > 1000000
 Should_Transfer_Files = IF_NEEDED
 WhenToTransferOutput = ON_EXIT
@@ -54,7 +45,7 @@ Queue
 EOF
 
   echo "[ submitting to condor... ]"
-  #condor_submit batch_condor
+  condor_submit batch_condor
 
   echo "[ cleaning up... ]"
   rm -rf batch_condor
