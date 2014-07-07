@@ -31,7 +31,8 @@ do
 universe = vanilla
 Executable = launch.sh
 Requirements = Memory >= 199 && OpSys == "LINUX"&& (Arch != "DUMMY" )&& Disk > 1000000
-Should_Transfer_Files = IF_NEEDED
+Should_Transfer_Files = YES
++TransferOutput = ""
 WhenToTransferOutput = ON_EXIT
 Transfer_Input_Files = include.tar.gz, source-${batch}.tar.gz
 Output = logs/out_${batch}
