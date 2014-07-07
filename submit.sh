@@ -7,9 +7,6 @@ dir=/hadoop/cms/store/user/aaivazis/samples/signal/raw/200
 
 # keep track of the batch counter
 batch=0
-# store the directory that we start in so we can move files back
-loc=$(pwd)
-
 # check if the project has already been compressed
 if [ ! -f include.tar.gz ] ; then
   echo "[ making the project archive... ]"
