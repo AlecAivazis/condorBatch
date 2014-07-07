@@ -12,7 +12,7 @@ export PYTHONPATH=${ROOTSYS}/lib:${PYTHONPATH}
 # set the environment variables to extract the file
 export COPYDIR=/hadoop/cms/store/user/aaivazis
 # the name given to the file by root
-export TEMP_FILE_NAME=babies/test.root
+export TEMP_FILE_NAME=baby.root
 # the name of the file on the target directory
 export OUTPUT=ntuple$1.root
 
@@ -22,11 +22,8 @@ export OUTPUT=ntuple$1.root
 # unarchive the included archives
 for f in *.tar.gz
 do
-  tar -xzf ${f}
+  tar -xzvf ${f}
 done
-
-# make a folder for root to put things in
-mkdir babies
 
 # check that everything made it okay
 echo "filesystem: "

@@ -3,8 +3,7 @@
 # author: alec aivazis
 
 # the directory to loop over
-#dir=/hadoop/cms/store/user/aaivazis/samples/signal/raw/1000
-dir=/hadoop/cms/store/user/aaivazis/samples
+dir=/hadoop/cms/store/user/aaivazis/samples/signal/raw/200
 
 # keep track of the batch counter
 batch=0

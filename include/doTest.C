@@ -17,6 +17,6 @@ doTest() {
     // create the looper
     babyMaker* looper = new babyMaker();
     // loop over the file
-    looper->ScanChain(chain, "test"); 
+    looper->ScanChain(chain, "baby"); 
 
 }

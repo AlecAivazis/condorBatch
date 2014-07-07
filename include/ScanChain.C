@@ -52,7 +52,7 @@ void babyMaker::ScanChain(TChain* chain, std::string baby_name, int numEvents, f
       cout << "Processing the first " << numEvents << " event(s)" << endl;
   }
 
-  MakeBabyNtuple( Form("babies/%s.root", baby_name.c_str()) );
+  MakeBabyNtuple( Form("%s.root", baby_name.c_str()) );
 
   // File Loop
   int nDuplicates = 0;
