@@ -21,9 +21,9 @@ fi
 
 for f in ${dir}/*.root
 do
-  # 
   echo "[ compressing target root file... ]"
-  tar -zcvf source-${batch}.tar.gz -C ${dir} $(basename ${f})
+  echo ${f}
+  tar -zcf source-${batch}.tar.gz -C ${dir} $(basename ${f})
 
   echo "[ creating condor submission file... ]"
   rm -rf batch_condor

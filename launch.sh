@@ -22,7 +22,8 @@ cd ${_CONDOR_SCRATCH_DIR}
 # unarchive the included archives
 for f in *.tar.gz
 do
-  tar -xzvf ${f}
+  echo ${f}
+  tar -xzf ${f}
 done
 
 # make a folder for root to put things in
