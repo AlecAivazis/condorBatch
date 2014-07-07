@@ -1,5 +1,6 @@
 
-# Getting Started
+#Condor Batch Submissions
+
 
 
 This project loops over a dirctory and submits a condor job that creates a baby out of each root file. 
