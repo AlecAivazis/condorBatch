@@ -17,7 +17,7 @@ export TEMP_FILE_NAME=baby.root
 export OUTPUT=ntuple$1.root
 
 # change the working directory to the condor tmp
-# cd ${_CONDOR_SCRATCH_DIR}
+cd ${_CONDOR_SCRATCH_DIR}
 
 # unarchive the included archives
 for f in *.tar.gz
