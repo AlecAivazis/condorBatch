@@ -13,7 +13,7 @@ To submit the jobs, run
 ./submit.sh
 ```
 
-Which which will package all of the project files, go over every .root file in the directory designated by `submit.sh` and package it with a job that runs the designated executable.  
+Which which will compress all of the project files, go over every .root file in the directory designated by `submit.sh` and package it with a job that runs the designated executable.  
 
 ### The Condor Executable
 
