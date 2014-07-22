@@ -6,9 +6,6 @@
 dir=/hadoop/cms/store/group/snt/papers2012/Summer12_53X_MC/DYJetsToLL_M-50_TuneZ2Star_8TeV-madgraph-tarball_Summer12_DR53X-PU_S10_START53_V7A-v1/V05-03-23
 # keep track of the batch counter
 batch=0
-# store the directory that we start in so we can move files back
-loc=$(pwd)
-
 # check if the project has already been compressed
 if [ ! -f include.tar.gz ] ; then
   echo "[ making the project archive... ]"
